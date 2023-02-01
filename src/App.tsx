@@ -10,21 +10,20 @@ const GuestList = (): JSX.Element => {
 		setList([...newList, name]);
 		setName("");
 	};
+	const onChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+		setName(event.target.value);
+	};
 	return (
 		<>
-			<input
-				type="text"
-				onChange={(e) => setName(e.target.value)}
-				value={name}
-			/>
+			<input type="text" onChange={onChange} value={name} />
 			<button type="submit" onClick={handleClick}>
 				Add
 			</button>
-			<div>
+			<ul>
 				{list.map((inv) => (
-					<p>{inv}</p>
+					<li key={inv}>{inv}</li>
 				))}
-			</div>
+			</ul>
 		</>
 	);
 };
