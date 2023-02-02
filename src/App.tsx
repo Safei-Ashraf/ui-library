@@ -37,6 +37,7 @@ const GuestList = (): JSX.Element => {
 					value={name}
 					ref={inputRef}
 				/>
+				<input type="date" ref={inputRef} id="X" />
 				<button type="submit" onClick={handleClick}>
 					Add
 				</button>
