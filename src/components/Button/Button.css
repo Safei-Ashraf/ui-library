@@ -1,0 +1,13 @@
+.primary {
+	@apply p-4 w-auto bg-black text-center text-pink-50;
+}
+.secondary {
+	@apply p-8 bg-red-400 text-black;
+}
+
+.success {
+}
+.warning {
+}
+.danger {
+}
