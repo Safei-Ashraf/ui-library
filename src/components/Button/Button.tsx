@@ -9,27 +9,16 @@ export enum buttonVariants {
 }
 
 interface ButtonProps {
-	variant?: buttonVariants;
+	primary?: boolean;
+	secondary?: boolean;
+	success?: boolean;
+	warning?: boolean;
+	danger?: boolean;
 	rounded?: boolean;
 	outline?: boolean;
 	children?: ReactNode;
 }
 
-export const Button = ({
-	variant,
-	rounded,
-	outline,
-	children,
-	...props
-}: ButtonProps): JSX.Element => {
-	return (
-		<button
-			{...props}
-			className={`${
-				variant === "primary" ? "primary " : "secondary"
-			} btn`}
-		>
-			{children}
-		</button>
-	);
+export const Button = ({ children, ...props }: ButtonProps): JSX.Element => {
+	return <button {...props}>{children}</button>;
 };
