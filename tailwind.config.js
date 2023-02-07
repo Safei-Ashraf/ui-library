@@ -114,6 +114,12 @@ module.exports = {
 			thick: "2px",
 			bold: "4px",
 		},
+		boxShadow: {
+			"shd-1": "0 4px 8px 0 rgba(0, 0, 0, 0.03)",
+			"shd-2": "0 8px 16px 0 rgba(0, 0, 0, 0.09)",
+			"shd-3": "0 4px 32px 0 rgba(0, 0, 0, 0.14)",
+			"shd-4": "0 4px 64px 0 rgba(0, 0, 0, 0.2)",
+		},
 	},
 	plugins: [],
 };
