@@ -18,7 +18,7 @@ export const Button = ({ children, ...props }: ButtonProps): JSX.Element => {
 	// 	btn: props.primary,
 	// });
 	return (
-		<button {...props} className="bg-primary-main text-primary-hover">
+		<button {...props} className="bg-primary text-secondary btn">
 			{children}
 		</button>
 	);
