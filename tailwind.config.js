@@ -104,6 +104,16 @@ module.exports = {
 			xxxl: "3.5rem",
 			xxxxl: "5rem",
 		},
+		borderRadius: {
+			sm: "2px",
+			md: "4px",
+			lg: "8px",
+		},
+		borderWidth: {
+			thin: "1px",
+			thick: "2px",
+			bold: "4px",
+		},
 	},
 	plugins: [],
 };
