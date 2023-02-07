@@ -5,6 +5,7 @@ function App() {
 	return (
 		<div className="App bg-primary-main border border-primary-border text-primary-main font-inter">
 			Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias.
+			<Button className="">Click Me</Button>
 		</div>
 	);
 }

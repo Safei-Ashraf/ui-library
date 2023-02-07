@@ -16,5 +16,5 @@
 	background-color: "#FE544A";
 }
 .btn {
-	@apply px-8 py-3 rounded-3xl bg-fontFamily-inter-0;
+	@apply px-8 py-3 rounded-3xl;
 }

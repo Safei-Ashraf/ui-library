@@ -10,6 +10,7 @@ interface ButtonProps {
 	danger?: boolean;
 	rounded?: boolean;
 	outline?: boolean;
+	className?: string;
 	children?: ReactNode;
 }
 
