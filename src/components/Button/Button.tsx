@@ -1,4 +1,5 @@
 import React, { ReactNode } from "react";
+import className from "classnames";
 import "./Button.css";
 export enum buttonVariants {
 	PRIMARY = "primary",
@@ -20,5 +21,12 @@ interface ButtonProps {
 }
 
 export const Button = ({ children, ...props }: ButtonProps): JSX.Element => {
-	return <button {...props}>{children}</button>;
+	const classes = className({
+		btn: props.primary,
+	});
+	return (
+		<button {...props} className="bg-primary-main text-primary-hover">
+			{children}
+		</button>
+	);
 };

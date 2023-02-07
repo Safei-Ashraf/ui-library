@@ -4,8 +4,9 @@ import { Button, buttonVariants } from "./components/Button/Button";
 
 function App() {
 	return (
-		<div className="App">
-			<Button variant={buttonVariants.SECONDARY}>Click Me</Button>
+		<div className="App bg-primary-main border border-primary-border text-primary-main">
+			<Button>dd</Button>
+			what
 		</div>
 	);
 }

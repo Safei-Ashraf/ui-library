@@ -1,5 +1,5 @@
 .primary {
-	@apply p-4 w-auto bg-black text-center text-pink-50;
+	@apply p-4 w-auto  text-center text-pink-50;
 	background-color: "#00A8E8";
 }
 .secondary {
