@@ -2,6 +2,12 @@
 module.exports = {
 	content: ["./src/**/*.{js,jsx,ts,tsx}", "./stories/*"],
 	theme: {
+		screens: {
+			sm: { min: "0px", max: "599px" },
+			md: { min: "600px", max: "899px" },
+			lg: { min: "900px", max: "1300px" },
+			xlg: { min: "1331px" },
+		},
 		colors: {
 			primary: {
 				DEFAULT: "#00AB0E",
