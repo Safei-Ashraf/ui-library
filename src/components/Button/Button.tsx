@@ -1,13 +1,6 @@
-import React, { ReactNode } from "react";
-import className from "classnames";
+import { ReactNode } from "react";
+// import className from "classnames";
 import "./Button.css";
-export enum buttonVariants {
-	PRIMARY = "primary",
-	SECONDARY = "secondary",
-	SUCCESS = "success",
-	WARNING = "warning",
-	DANGER = "danger",
-}
 
 interface ButtonProps {
 	primary?: boolean;
@@ -21,9 +14,9 @@ interface ButtonProps {
 }
 
 export const Button = ({ children, ...props }: ButtonProps): JSX.Element => {
-	const classes = className({
-		btn: props.primary,
-	});
+	// const classes = className({
+	// 	btn: props.primary,
+	// });
 	return (
 		<button {...props} className="bg-primary-main text-primary-hover">
 			{children}
