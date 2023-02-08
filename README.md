@@ -1,4 +1,4 @@
-# React and TypeScript App
+# React and TypeScript Custom Components Library
 
 
 ## In the project directory, you can run:
@@ -14,7 +14,7 @@ You will also see any lint errors in the console.
 
 ## Future enhancing:
 
-Add extra Status for "Tie"
+Add extra Components
 
 
 ## Learn More
