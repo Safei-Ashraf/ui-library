@@ -3,18 +3,23 @@ import { ReactNode } from "react";
 import "./Button.css";
 
 interface ButtonProps {
-	primary?: boolean;
-	secondary?: boolean;
-	success?: boolean;
-	warning?: boolean;
-	danger?: boolean;
-	rounded?: boolean;
-	outline?: boolean;
+	variant?: "filled" | "ghost" | "text";
+	size?: "large" | "medium" | "small";
+	icon?: ReactNode;
+	iconDirection: "right" | "left";
 	className?: string;
 	children?: ReactNode;
+	onClick?: (e: React.MouseEvent<HTMLButtonElement>) => void;
+	color?: "primary" | "secondary" | "neutral";
 }
 
-export const Button = ({ children, ...props }: ButtonProps): JSX.Element => {
+export const Button = ({
+	variant = "filled",
+	size = "medium",
+	icon = "",
+	children,
+	...props
+}: ButtonProps): JSX.Element => {
 	// const classes = className({
 	// 	btn: props.primary,
 	// });
