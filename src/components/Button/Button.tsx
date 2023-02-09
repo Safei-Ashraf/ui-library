@@ -1,6 +1,7 @@
-import { ReactNode } from "react";
+import { ReactNode, ReactElement } from "react";
 import className from "classnames";
 import "./Button.css";
+import { IconProps } from "../StarIcon/Icon";
 
 // type IconProps = {
 // 	size?: "lg" | "md" | "sm";
@@ -14,7 +15,7 @@ interface ButtonProps {
 	extraClasses?: string;
 	children?: ReactNode;
 	onClick?: (e: React.MouseEvent<HTMLButtonElement>) => void;
-	// renderIcon?: () => ReactElement<IconProps>;
+	icon?: ReactElement<IconProps>;
 	iconDirection?: "right" | "left";
 	isDisabled?: boolean;
 }
@@ -29,6 +30,7 @@ export const Button = ({
 	iconDirection = "right",
 	isDisabled,
 	text = "Click me",
+	icon,
 	...props
 }: ButtonProps): JSX.Element => {
 	const classes = className("btn", {
@@ -39,7 +41,6 @@ export const Button = ({
 		"disabled-filled": isDisabled,
 		extraClasses: extraClasses,
 	});
-	// const icon = renderIcon();
 	return (
 		<button
 			onClick={onClick}
@@ -47,7 +48,7 @@ export const Button = ({
 			className={classes}
 			disabled={isDisabled}
 		>
-			{/* {icon} */}
+			{icon}
 			{text}
 			{children}
 		</button>
