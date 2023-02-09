@@ -1,0 +1,25 @@
+.btn {
+	@apply rounded-md tracking-wide font-medium text-white border-thin font-inter flex justify-center items-center;
+}
+.lg {
+	@apply px-lg py-md text-fs.20 h-4xl;
+}
+.md {
+	@apply px-md py-xs text-fs.base;
+}
+.sm {
+	@apply px-sm py-xxs text-fs.14;
+}
+
+.primary-filled {
+	@apply bg-primary hover:bg-primary-hover focus:bg-primary-focus  border-spacing-2 border-primary-border;
+}
+.secondary-filled {
+	@apply bg-secondary hover:bg-secondary focus:bg-secondary-focus border-secondary-border;
+}
+.neutral-filled {
+	@apply bg-neutral hover:bg-neutral-hover focus:bg-neutral-focus border-neutral-light;
+}
+.disabled-filled {
+	@apply bg-neutral-disabled-bg text-neutral-disabled-text border-neutral-lighter pointer-events-none;
+}

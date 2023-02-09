@@ -1,19 +1,21 @@
-import { ReactElement, ReactNode } from "react";
-// import className from "classnames";
+import { ReactNode } from "react";
+import className from "classnames";
 import "./Button.css";
-type IconProps = {
-	size?: "lg" | "md" | "sm";
-	color: string;
-};
+
+// type IconProps = {
+// 	size?: "lg" | "md" | "sm";
+// 	color: string;
+// };
 interface ButtonProps {
 	variant?: "filled" | "ghost" | "text";
+	color?: "primary" | "secondary" | "neutral";
 	size?: "lg" | "md" | "sm";
 	extraClasses?: string;
 	children?: ReactNode;
 	onClick?: (e: React.MouseEvent<HTMLButtonElement>) => void;
-	color?: "primary" | "secondary" | "neutral";
-	renderIcon: () => ReactElement<IconProps>;
+	// renderIcon?: () => ReactElement<IconProps>;
 	iconDirection?: "right" | "left";
+	isDisabled?: boolean;
 }
 
 export const Button = ({
@@ -21,23 +23,29 @@ export const Button = ({
 	size = "md",
 	color = "primary",
 	extraClasses,
-	renderIcon,
 	onClick,
 	children,
 	iconDirection = "right",
+	isDisabled,
 	...props
 }: ButtonProps): JSX.Element => {
-	// const classes = className({
-	// 	btn: props.primary,
-	// });
-	const icon = renderIcon();
+	const classes = className("btn", {
+		"primary-filled": variant === "filled" && color === "primary",
+		lg: size === "lg",
+		md: size === "md",
+		sm: size === "sm",
+		"disabled-filled": isDisabled,
+		extraClasses: extraClasses,
+	});
+	// const icon = renderIcon();
 	return (
 		<button
 			onClick={onClick}
 			{...props}
-			className={"bg-primary text-secondary btn" + extraClasses}
+			className={classes}
+			disabled={isDisabled}
 		>
-			{icon}
+			{/* {icon} */}
 			{children}
 		</button>
 	);
