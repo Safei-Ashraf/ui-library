@@ -22,7 +22,7 @@ export default {
 		},
 		iconDirection: { control: "inline-radio", options: ["left", "right"] },
 		isDisabled: { control: "boolean", type: "boolean" },
-		children: { control: "text", type: "string" },
+		text: { control: "text", type: "string" },
 	},
 } as ComponentMeta<typeof Button>;
 

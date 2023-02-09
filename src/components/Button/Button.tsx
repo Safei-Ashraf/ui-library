@@ -7,9 +7,10 @@ import "./Button.css";
 // 	color: string;
 // };
 interface ButtonProps {
-	variant?: "filled" | "ghost" | "text";
+	variant?: "filled" | "outline" | "text";
 	color?: "primary" | "secondary" | "neutral";
 	size?: "lg" | "md" | "sm";
+	text?: string;
 	extraClasses?: string;
 	children?: ReactNode;
 	onClick?: (e: React.MouseEvent<HTMLButtonElement>) => void;
@@ -27,6 +28,7 @@ export const Button = ({
 	children,
 	iconDirection = "right",
 	isDisabled,
+	text = "Click me",
 	...props
 }: ButtonProps): JSX.Element => {
 	const classes = className("btn", {
@@ -46,6 +48,7 @@ export const Button = ({
 			disabled={isDisabled}
 		>
 			{/* {icon} */}
+			{text}
 			{children}
 		</button>
 	);
