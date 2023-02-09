@@ -13,6 +13,7 @@ interface ButtonProps {
 	onClick?: (e: React.MouseEvent<HTMLButtonElement>) => void;
 	icon?: boolean;
 	iconDirection?: "right" | "left";
+	iconOnly?: boolean;
 	isDisabled?: boolean;
 }
 
@@ -24,6 +25,7 @@ export const Button = ({
 	onClick,
 	children,
 	iconDirection = "right",
+	iconOnly = false,
 	isDisabled,
 	text = "Click me",
 	icon,
@@ -48,15 +50,6 @@ export const Button = ({
 		extraClasses: extraClasses,
 	});
 
-	const iconColor = className({
-		"#ffffff": variant === "filled" && !isDisabled,
-		"#3e413f80": variant === "filled" && isDisabled,
-		"#00AB0E": variant === "outline" && !isDisabled && color === "primary",
-		"#0093AD":
-			variant === "outline" && !isDisabled && color === "secondary",
-		"#1A1B1A": variant === "outline" && !isDisabled && color === "neutral",
-		"#3e413f": variant === "outline" && isDisabled,
-	});
 	return (
 		<button
 			onClick={onClick}
@@ -65,15 +58,15 @@ export const Button = ({
 			{...props}
 		>
 			{icon && (
-				<div>
+				<div className="icon-container">
 					<StarIcon
 						size={size}
-						color={iconColor}
 						iconDirection={iconDirection}
+						iconOnly={iconOnly}
 					/>
 				</div>
 			)}
-			{text && <div>{text}</div>}
+			{text && !iconOnly && <div>{text}</div>}
 			{children}
 		</button>
 	);
