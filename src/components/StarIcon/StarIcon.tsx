@@ -17,14 +17,12 @@ export const StarIcon = ({
 		"15": size === "sm",
 	});
 	const iconContainerClasses = className("icon", {
-		"right-lg":
-			(size === "lg" && iconDirection === "right" && !iconOnly) ||
-			(size === "md" && iconDirection === "right" && !iconOnly),
-		"right-sm": size === "sm" && iconDirection === "right" && !iconOnly,
-		"left-lg":
-			(size === "lg" && iconDirection === "left" && !iconOnly) ||
-			(size === "md" && iconDirection === "left" && !iconOnly),
-		"left-sm": size === "sm" && iconDirection === "left" && !iconOnly,
+		right:
+			(iconDirection === "right" && !iconOnly) ||
+			(iconDirection === "right" && !iconOnly),
+		left:
+			(iconDirection === "left" && !iconOnly) ||
+			(iconDirection === "left" && !iconOnly),
 	});
 	return (
 		<svg

@@ -1,14 +1,6 @@
-.right-lg {
-	@apply ml-md;
-}
-.right-sm {
+.right {
 	@apply ml-sm;
 }
-
-.left-lg {
-	@apply mr-md;
-}
-
-.left-sm {
+.left {
 	@apply mr-sm;
 }
