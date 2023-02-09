@@ -38,5 +38,5 @@ const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />;
 export const ButtonMain = Template.bind({});
 export const ButtonWithIcon = Template.bind({});
 ButtonWithIcon.args = {
-	icon: <StarIcon />,
+	icon: true,
 };
