@@ -1,25 +1,43 @@
 .btn {
-	@apply rounded-md tracking-wide font-medium text-white border-thin font-inter flex justify-center items-center;
+	@apply rounded-md tracking-wide font-medium text-white border-thin font-inter flex flex-row justify-center items-center cursor-pointer;
+}
+.reverse {
+	@apply flex-row-reverse;
 }
 .lg {
 	@apply px-lg py-md text-fs.20 h-4xl;
 }
 .md {
-	@apply px-md py-xs text-fs.base;
+	@apply px-md py-xs text-fs.base h-xxl;
 }
 .sm {
-	@apply px-sm py-xxs text-fs.14;
+	@apply px-sm py-xxs text-fs.14 h-8;
 }
-
+/*variant = filled */
 .primary-filled {
 	@apply bg-primary hover:bg-primary-hover focus:bg-primary-focus  border-spacing-2 border-primary-border;
 }
 .secondary-filled {
-	@apply bg-secondary hover:bg-secondary focus:bg-secondary-focus border-secondary-border;
+	@apply bg-secondary hover:bg-secondary-hover focus:bg-secondary-focus border-spacing-2 border-secondary-border;
 }
 .neutral-filled {
-	@apply bg-neutral hover:bg-neutral-hover focus:bg-neutral-focus border-neutral-light;
+	@apply bg-neutral hover:bg-neutral-hover focus:bg-neutral-focus border-spacing-2 border-neutral-light;
 }
 .disabled-filled {
-	@apply bg-neutral-disabled-bg text-neutral-disabled-text border-neutral-lighter pointer-events-none;
+	@apply bg-neutral-disabled-bg text-neutral-disabled-text border-transparent pointer-events-none;
+}
+
+/*variant = outline */
+
+.primary-outline {
+	@apply bg-transparent text-primary  hover:bg-primary-bg-light border-primary-border focus:border-thick;
+}
+.secondary-outline {
+	@apply bg-transparent text-secondary hover:bg-secondary-outline-hover border-thin border-secondary-border focus:border-thick;
+}
+.neutral-outline {
+	@apply bg-transparent text-neutral-focus  hover:bg-neutral-lighter border-neutral-focus focus:border-thick;
+}
+.disabled-outline {
+	@apply bg-transparent text-neutral border-neutral-lighter pointer-events-none opacity-0.3;
 }

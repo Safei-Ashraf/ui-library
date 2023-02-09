@@ -5,9 +5,10 @@ function App() {
 		<div className="App">
 			<Button
 				variant="filled"
-				color="primary"
-				size="sm"
+				color="secondary"
+				size="lg"
 				icon={true}
+				iconDirection="right"
 			></Button>
 		</div>
 	);

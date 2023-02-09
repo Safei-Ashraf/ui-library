@@ -23,11 +23,6 @@ export default {
 		iconDirection: { control: "inline-radio", options: ["left", "right"] },
 		isDisabled: { control: "boolean", type: "boolean" },
 		text: { control: "text", type: "string" },
-		icon: {
-			table: {
-				disable: true,
-			},
-		},
 	},
 } as ComponentMeta<typeof Button>;
 
@@ -41,8 +36,5 @@ ButtonMain.args = {
 	size: "lg",
 	text: "Click me",
 	isDisabled: false,
-};
-export const ButtonWithIcon = Template.bind({});
-ButtonWithIcon.args = {
-	icon: true,
+	iconDirection: "left",
 };

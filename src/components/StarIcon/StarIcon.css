@@ -1,0 +1,14 @@
+.right-lg {
+	@apply ml-md;
+}
+.right-sm {
+	@apply ml-sm;
+}
+
+.left-lg {
+	@apply mr-md;
+}
+
+.left-sm {
+	@apply mr-sm;
+}
