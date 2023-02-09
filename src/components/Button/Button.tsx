@@ -1,21 +1,7 @@
-import { ReactNode } from "react";
 import className from "classnames";
-import "./Button.css";
 import StarIcon from "../StarIcon";
-
-interface ButtonProps {
-	variant?: "filled" | "outline" | "text";
-	color?: "primary" | "secondary" | "neutral";
-	size?: "lg" | "md" | "sm";
-	text?: string;
-	extraClasses?: string;
-	children?: ReactNode;
-	onClick?: (e: React.MouseEvent<HTMLButtonElement>) => void;
-	icon?: boolean;
-	iconDirection?: "right" | "left";
-	iconOnly?: boolean;
-	isDisabled?: boolean;
-}
+import { ButtonProps } from "./Button.d";
+import "./Button.css";
 
 export const Button = ({
 	variant = "filled",
