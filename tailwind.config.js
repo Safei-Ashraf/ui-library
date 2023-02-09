@@ -106,15 +106,15 @@ module.exports = {
 				DEFAULT: "#00AB0E",
 				hover: "#00790A",
 				focus: "#004806",
-				disabled: " rgba(0, 171, 14, 0.13)",
+				"bg-light": " rgba(0, 171, 14, 0.13)",
 				border: "rgba(0, 171, 14, 0.7)",
 			},
 			secondary: {
 				DEFAULT: "#0093AD",
 				hover: "#00687B",
 				focus: "#003E49",
-				disabled: "rgba(0, 147, 173, 0.13)",
 				border: " rgba(0, 147, 173, 0.7)",
+				"outline-hover": " rgba(0, 147, 173, 0.13)",
 			},
 			neutral: {
 				DEFAULT: "#3E413F",
@@ -174,6 +174,7 @@ module.exports = {
 			},
 			white: "#fff",
 			black: "#000",
+			transparent: "#ffffff00",
 		},
 		extend: {
 			spacing: {
