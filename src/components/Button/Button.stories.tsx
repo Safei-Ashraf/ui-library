@@ -37,4 +37,5 @@ ButtonMain.args = {
 	text: "Click me",
 	isDisabled: false,
 	iconDirection: "left",
+	iconOnly: false,
 };
