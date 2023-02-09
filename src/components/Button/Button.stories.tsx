@@ -2,7 +2,6 @@ import React from "react";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 
 import { Button } from "./Button";
-import StarIcon from "../StarIcon";
 
 //default export that describes the component,
 export default {
@@ -36,6 +35,13 @@ const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />;
 
 // named exports that describe the stories.
 export const ButtonMain = Template.bind({});
+ButtonMain.args = {
+	variant: "filled",
+	color: "primary",
+	size: "lg",
+	text: "Click me",
+	isDisabled: false,
+};
 export const ButtonWithIcon = Template.bind({});
 ButtonWithIcon.args = {
 	icon: true,
