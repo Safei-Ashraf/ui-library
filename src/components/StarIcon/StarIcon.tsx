@@ -3,7 +3,7 @@ import conditionalProperties from "classnames";
 import { IconProps } from "./Icon";
 
 export const StarIcon = ({
-	size,
+	size = "md",
 	color = "white",
 	classes,
 	...props
@@ -16,7 +16,6 @@ export const StarIcon = ({
 
 	return (
 		<svg
-			viewBox="0 0 24 24"
 			fill={color}
 			xmlns="http://www.w3.org/2000/svg"
 			width={baseIconSizes}
