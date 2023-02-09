@@ -8,19 +8,23 @@ type IconProps = {
 interface ButtonProps {
 	variant?: "filled" | "ghost" | "text";
 	size?: "lg" | "md" | "sm";
-	renderIcon: () => ReactElement<IconProps>;
-	iconDirection: "right" | "left";
-	className?: string;
+	extraClasses?: string;
 	children?: ReactNode;
 	onClick?: (e: React.MouseEvent<HTMLButtonElement>) => void;
 	color?: "primary" | "secondary" | "neutral";
+	renderIcon: () => ReactElement<IconProps>;
+	iconDirection?: "right" | "left";
 }
-const Icon = () => "Icon";
+
 export const Button = ({
 	variant = "filled",
 	size = "md",
-	children,
+	color = "primary",
+	extraClasses,
 	renderIcon,
+	onClick,
+	children,
+	iconDirection = "right",
 	...props
 }: ButtonProps): JSX.Element => {
 	// const classes = className({
@@ -28,7 +32,11 @@ export const Button = ({
 	// });
 	const icon = renderIcon();
 	return (
-		<button {...props} className="bg-primary text-secondary btn">
+		<button
+			onClick={onClick}
+			{...props}
+			className={"bg-primary text-secondary btn" + extraClasses}
+		>
 			{icon}
 			{children}
 		</button>
