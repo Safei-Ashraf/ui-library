@@ -112,14 +112,14 @@ module.exports = {
 			secondary: {
 				DEFAULT: "#0093AD",
 				hover: "#00687B",
-				focus: "##003E49",
+				focus: "#003E49",
 				disabled: "rgba(0, 147, 173, 0.13)",
 				border: " rgba(0, 147, 173, 0.7)",
 			},
 			neutral: {
 				DEFAULT: "#3E413F",
-				hover: "##2C2E2D",
-				focus: "##1A1B1A",
+				hover: "#2C2E2D",
+				focus: "#1A1B1A",
 				light: "rgba(62, 65, 63, 0.6)",
 				lighter: "rgba(62, 65, 63, 0.3)",
 				fade: " rgba(62, 65, 63, 0.1)",
