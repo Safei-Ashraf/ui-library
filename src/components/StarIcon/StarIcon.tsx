@@ -9,14 +9,15 @@ export const StarIcon = ({
 	...props
 }: IconProps): JSX.Element => {
 	const baseIconSizes = conditionalProperties({
-		"32": size === "lg",
-		"24": size === "md",
-		"20": size === "sm",
+		"20": size === "lg",
+		"16.67": size === "md",
+		"15": size === "sm",
 	});
 
 	return (
 		<svg
 			fill={color}
+			viewBox="0 0 24 24"
 			xmlns="http://www.w3.org/2000/svg"
 			width={baseIconSizes}
 			height={baseIconSizes}

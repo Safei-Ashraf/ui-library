@@ -1,12 +1,8 @@
-import { ReactNode, ReactElement } from "react";
+import { ReactNode } from "react";
 import className from "classnames";
 import "./Button.css";
-import { IconProps } from "../StarIcon/Icon";
+import StarIcon from "../StarIcon";
 
-// type IconProps = {
-// 	size?: "lg" | "md" | "sm";
-// 	color: string;
-// };
 interface ButtonProps {
 	variant?: "filled" | "outline" | "text";
 	color?: "primary" | "secondary" | "neutral";
@@ -15,7 +11,7 @@ interface ButtonProps {
 	extraClasses?: string;
 	children?: ReactNode;
 	onClick?: (e: React.MouseEvent<HTMLButtonElement>) => void;
-	icon?: ReactElement<IconProps>;
+	icon?: boolean;
 	iconDirection?: "right" | "left";
 	isDisabled?: boolean;
 }
@@ -33,23 +29,39 @@ export const Button = ({
 	icon,
 	...props
 }: ButtonProps): JSX.Element => {
-	const classes = className("btn", {
+	const buttonClasses = className("btn", {
 		"primary-filled": variant === "filled" && color === "primary",
 		lg: size === "lg",
 		md: size === "md",
 		sm: size === "sm",
+		"flex-row": iconDirection === "right",
+		"flex-row-reverse": iconDirection === "left",
 		"disabled-filled": isDisabled,
 		extraClasses: extraClasses,
+	});
+	const iconClasses = className("icon", {
+		"mr-md":
+			(size === "lg" && iconDirection === "right") ||
+			(size === "md" && iconDirection === "right"),
+		"mr-sm": size === "sm" && iconDirection === "right",
+		"ml-md":
+			(size === "lg" && iconDirection === "left") ||
+			(size === "md" && iconDirection === "left"),
+		"ml-sm": size === "sm" && iconDirection === "left",
 	});
 	return (
 		<button
 			onClick={onClick}
 			{...props}
-			className={classes}
+			className={buttonClasses}
 			disabled={isDisabled}
 		>
-			{icon}
-			{text}
+			{icon && (
+				<div className={iconClasses}>
+					<StarIcon size={size} />
+				</div>
+			)}
+			{text && <div>{text}</div>}
 			{children}
 		</button>
 	);
