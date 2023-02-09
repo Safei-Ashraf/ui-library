@@ -6,9 +6,9 @@ import "./StarIcon.css";
 
 export const StarIcon = ({
 	size = "md",
-	color = "white",
 	iconDirection = "left",
 	classes,
+	iconOnly,
 	...props
 }: IconProps): JSX.Element => {
 	const baseIconSizes = className({
@@ -18,17 +18,17 @@ export const StarIcon = ({
 	});
 	const iconContainerClasses = className("icon", {
 		"right-lg":
-			(size === "lg" && iconDirection === "right") ||
-			(size === "md" && iconDirection === "right"),
-		"right-sm": size === "sm" && iconDirection === "right",
+			(size === "lg" && iconDirection === "right" && !iconOnly) ||
+			(size === "md" && iconDirection === "right" && !iconOnly),
+		"right-sm": size === "sm" && iconDirection === "right" && !iconOnly,
 		"left-lg":
-			(size === "lg" && iconDirection === "left") ||
-			(size === "md" && iconDirection === "left"),
-		"left-sm": size === "sm" && iconDirection === "left",
+			(size === "lg" && iconDirection === "left" && !iconOnly) ||
+			(size === "md" && iconDirection === "left" && !iconOnly),
+		"left-sm": size === "sm" && iconDirection === "left" && !iconOnly,
 	});
 	return (
 		<svg
-			fill={color}
+			fill="currentColor"
 			viewBox="0 0 24 24"
 			xmlns="http://www.w3.org/2000/svg"
 			width={baseIconSizes}
