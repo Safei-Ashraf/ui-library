@@ -20,9 +20,10 @@ export default {
 			control: "inline-radio",
 			options: ["primary", "secondary", "neutral"],
 		},
+		text: { control: "text", type: "string" },
+		icon: { control: "boolean", type: "boolean" },
 		iconDirection: { control: "inline-radio", options: ["left", "right"] },
 		isDisabled: { control: "boolean", type: "boolean" },
-		text: { control: "text", type: "string" },
 	},
 } as ComponentMeta<typeof Button>;
 
