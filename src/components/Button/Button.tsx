@@ -33,7 +33,7 @@ export const Button = ({
 		lg: size === "lg",
 		md: size === "md",
 		sm: size === "sm",
-		reverse: iconDirection === "right",
+		reverse: iconDirection === "right" && icon === true,
 		extraClasses: extraClasses,
 	});
 
