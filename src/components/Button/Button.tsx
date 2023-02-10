@@ -29,6 +29,7 @@ export const Button = ({
 		"primary-text": variant === "text" && color === "primary",
 		"secondary-text": variant === "text" && color === "secondary",
 		"neutral-text": variant === "text" && color === "neutral",
+		"disabled-text": isDisabled && variant === "text",
 		lg: size === "lg",
 		md: size === "md",
 		sm: size === "sm",

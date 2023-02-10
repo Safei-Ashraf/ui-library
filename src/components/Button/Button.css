@@ -41,6 +41,19 @@
 .disabled-outline {
 	@apply bg-transparent text-neutral border-neutral-lighter pointer-events-none opacity-0.3;
 }
-.icon-container {
-	margin-top: 3px;
+
+/*variant = text */
+
+.primary-text {
+	@apply bg-transparent text-primary border-transparent  hover:bg-primary-bg-light hover:text-primary-hover active:border-thick active:text-primary-focus;
 }
+.secondary-text {
+	@apply bg-transparent text-secondary border-transparent hover:text-secondary-hover hover:bg-secondary-outline-hover  active:border-thick  active:text-secondary-focus;
+}
+.neutral-text {
+	@apply bg-transparent text-neutral  border-transparent hover:bg-neutral-lighter hover:text-neutral-hover  active:border-thick;
+}
+.disabled-text {
+	@apply bg-transparent text-neutral border-transparent pointer-events-none opacity-0.3;
+}
+
