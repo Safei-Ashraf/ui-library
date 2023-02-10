@@ -15,6 +15,9 @@ export const Button = ({
 	isDisabled,
 	text = "Click me",
 	icon,
+	bgColor,
+	textColor,
+	borderColor,
 	...props
 }: ButtonProps): JSX.Element => {
 	const buttonClasses = className("btn", {
@@ -42,6 +45,11 @@ export const Button = ({
 			onClick={onClick}
 			className={buttonClasses}
 			disabled={isDisabled}
+			style={{
+				backgroundColor: bgColor ? bgColor : "",
+				color: textColor ? textColor : "",
+				borderColor: borderColor ? borderColor : "",
+			}}
 			{...props}
 		>
 			{icon && (

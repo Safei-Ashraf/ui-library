@@ -3,6 +3,9 @@ import { ReactNode } from "react";
 export interface ButtonProps {
 	variant?: "filled" | "outline" | "text";
 	color?: "primary" | "secondary" | "neutral";
+	bgColor?: string;
+	textColor?: string;
+	borderColor?: string;
 	size?: "lg" | "md" | "sm";
 	text?: string;
 	extraClasses?: string;
