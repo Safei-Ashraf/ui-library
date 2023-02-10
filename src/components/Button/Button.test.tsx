@@ -38,4 +38,10 @@ describe("Button", () => {
 		render(<Button size="sm" variant="text" color="secondary" />);
 		expect(screen.getByRole("button")).toHaveClass("secondary-text", "sm");
 	});
+	it("check onClick function is called when user click", () => {
+		const handleclick = jest.fn();
+		render(<Button onClick={handleclick} />);
+		userEvent.click(screen.getByRole("button"));
+		expect(handleclick).toBeCalledTimes(1);
+	});
 });
