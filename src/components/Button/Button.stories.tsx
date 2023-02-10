@@ -24,6 +24,9 @@ export default {
 		icon: { control: "boolean", type: "boolean" },
 		iconDirection: { control: "inline-radio", options: ["left", "right"] },
 		isDisabled: { control: "boolean", type: "boolean" },
+		textColor: { control: "color" },
+		borderColor: { control: "color" },
+		bgColor: { control: "color" },
 	},
 } as ComponentMeta<typeof Button>;
 
@@ -37,6 +40,7 @@ ButtonMain.args = {
 	size: "lg",
 	text: "Click me",
 	isDisabled: false,
-	iconDirection: "left",
+	icon: false,
 	iconOnly: false,
+	iconDirection: "left",
 };
