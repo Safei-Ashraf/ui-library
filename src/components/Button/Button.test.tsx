@@ -1,3 +1,4 @@
+import renderer from "react-test-renderer";
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import "@testing-library/jest-dom";
@@ -44,4 +45,9 @@ describe("Button", () => {
 		userEvent.click(screen.getByRole("button"));
 		expect(handleclick).toBeCalledTimes(1);
 	});
+});
+
+describe("renders correctly", () => {
+	const tree = renderer.create(<Button />).toJSON();
+	expect(tree).toMatchSnapshot();
 });
