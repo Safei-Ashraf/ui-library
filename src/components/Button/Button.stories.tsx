@@ -3,7 +3,6 @@ import { ComponentStory, ComponentMeta } from "@storybook/react";
 
 import { Button } from "./Button";
 
-//default export that describes the component,
 export default {
 	title: "UI-Library/Button",
 	component: Button,
@@ -32,7 +31,6 @@ export default {
 
 const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />;
 
-// named exports that describe the stories.
 export const ButtonMain = Template.bind({});
 ButtonMain.args = {
 	variant: "filled",
