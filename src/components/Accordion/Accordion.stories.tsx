@@ -1,4 +1,4 @@
-import { ComponentStory, ComponentMeta } from "@storybook/react";
+import { ComponentMeta } from "@storybook/react";
 
 import { Accordion } from "./Accordion";
 
@@ -8,12 +8,11 @@ export default {
 	argTypes: {},
 } as ComponentMeta<typeof Accordion>;
 
-const Template: ComponentStory<typeof Accordion> = (args) => (
-	// <Accordion {...args} />
-);
+// const Template: ComponentStory<typeof Accordion> = (args) => (
+// 	// <Accordion {...args} />
+// );
 
-export const AccordionMain = Template.bind({});
-AccordionMain.args = {
-	/*
-    args if any with default value*/ 
-};
+// export const AccordionMain = Template.bind({});
+// AccordionMain.args = {
+// 	/**/
+// };
