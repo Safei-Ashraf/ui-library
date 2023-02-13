@@ -3,6 +3,13 @@
 exports[` 1`] = `
 <button
   className="btn primary-filled md"
+  style={
+    Object {
+      "backgroundColor": "",
+      "borderColor": "",
+      "color": "",
+    }
+  }
 >
   <div>
     Click me
