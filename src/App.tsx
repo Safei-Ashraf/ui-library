@@ -3,8 +3,13 @@ import Button from "./components/Button";
 function App() {
 	return (
 		<div className="App">
-			Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias.
-			<Button className="">Click Me</Button>
+			<Button
+				variant="filled"
+				color="secondary"
+				size="lg"
+				icon={true}
+				iconDirection="right"
+			></Button>
 		</div>
 	);
 }

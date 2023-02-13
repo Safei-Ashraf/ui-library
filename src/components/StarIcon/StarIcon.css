@@ -1,0 +1,6 @@
+.right {
+	@apply ml-sm;
+}
+.left {
+	@apply mr-sm;
+}

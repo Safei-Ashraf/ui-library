@@ -1,30 +1,67 @@
-import { ReactNode } from "react";
-// import className from "classnames";
+import className from "classnames";
+import StarIcon from "../StarIcon";
+import { ButtonProps } from "./Button.d";
 import "./Button.css";
-
-interface ButtonProps {
-	variant?: "filled" | "ghost" | "text";
-	size?: "large" | "medium" | "small";
-	icon?: ReactNode;
-	iconDirection: "right" | "left";
-	className?: string;
-	children?: ReactNode;
-	onClick?: (e: React.MouseEvent<HTMLButtonElement>) => void;
-	color?: "primary" | "secondary" | "neutral";
-}
 
 export const Button = ({
 	variant = "filled",
-	size = "medium",
-	icon = "",
+	size = "md",
+	color = "primary",
+	extraClasses,
+	onClick,
 	children,
+	iconDirection = "right",
+	iconOnly = false,
+	isDisabled,
+	text = "Click me",
+	icon,
+	bgColor,
+	textColor,
+	borderColor,
 	...props
 }: ButtonProps): JSX.Element => {
-	// const classes = className({
-	// 	btn: props.primary,
-	// });
+	const buttonClasses = className("btn", {
+		"primary-filled": variant === "filled" && color === "primary",
+		"secondary-filled": variant === "filled" && color === "secondary",
+		"neutral-filled": variant === "filled" && color === "neutral",
+		"disabled-filled": isDisabled && variant === "filled",
+		"primary-outline": variant === "outline" && color === "primary",
+		"secondary-outline": variant === "outline" && color === "secondary",
+		"neutral-outline": variant === "outline" && color === "neutral",
+		"disabled-outline": isDisabled && variant === "outline",
+		"primary-text": variant === "text" && color === "primary",
+		"secondary-text": variant === "text" && color === "secondary",
+		"neutral-text": variant === "text" && color === "neutral",
+		"disabled-text": isDisabled && variant === "text",
+		lg: size === "lg",
+		md: size === "md",
+		sm: size === "sm",
+		reverse: iconDirection === "right" && icon === true,
+		extraClasses: extraClasses,
+	});
+
 	return (
-		<button {...props} className="bg-primary text-secondary btn">
+		<button
+			onClick={onClick}
+			className={buttonClasses}
+			disabled={isDisabled}
+			style={{
+				backgroundColor: bgColor ? bgColor : "",
+				color: textColor ? textColor : "",
+				borderColor: borderColor ? borderColor : "",
+			}}
+			{...props}
+		>
+			{icon && (
+				<div className="icon-container">
+					<StarIcon
+						size={size}
+						iconDirection={iconDirection}
+						iconOnly={iconOnly}
+					/>
+				</div>
+			)}
+			{text && !iconOnly && <div>{text}</div>}
 			{children}
 		</button>
 	);
