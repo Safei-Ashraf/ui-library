@@ -188,6 +188,9 @@ module.exports = {
 				"3xl": "3rem",
 				"4xl": "3.5rem",
 			},
+			rotate: {
+				270: "270deg",
+			},
 		},
 	},
 	plugins: [],
