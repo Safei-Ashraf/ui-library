@@ -1,8 +1,9 @@
 import { useState } from "react";
 import { AccordionProps } from "./Accordion.d";
+import ChevronIcon from "./ChevronIcon";
 
 export const Accordion = ({ items, ...props }: AccordionProps): JSX.Element => {
-	const [expandedIndex, setExpandedIndex] = useState(0);
+	const [expandedIndex, setExpandedIndex] = useState(-1);
 
 	const renderedItems = items.map(({ id, heading, content }, index) => {
 		const isExapnded = index === expandedIndex;
@@ -10,10 +11,16 @@ export const Accordion = ({ items, ...props }: AccordionProps): JSX.Element => {
 			<li key={id}>
 				<div
 					onClick={() => {
-						setExpandedIndex(index);
+						if (isExapnded === true) {
+							setExpandedIndex(-1);
+						} else {
+							setExpandedIndex(index);
+						}
 					}}
 				>
 					{heading}
+					{isExapnded && <ChevronIcon direction="down" />}
+					{!isExapnded && <ChevronIcon direction="left" />}
 				</div>
 				{isExapnded && <div>{content}</div>}
 			</li>
