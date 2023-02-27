@@ -33,14 +33,15 @@ export const Accordion = ({ items, ...props }: AccordionProps): JSX.Element => {
 										? "rotate(0deg)"
 										: "rotate(90deg)"
 								}`,
-								transition: "all 0.1s linear",
+								transition: "transform 0.3s linear",
 							}}
 						/>
 					</div>
 				</div>
-				{isExapnded && (
-					<div className="accordion-content">{content}</div>
-				)}
+
+				<div className={`accordion-content ${isExapnded && "open"}`}>
+					{content}
+				</div>
 			</li>
 		);
 	});
