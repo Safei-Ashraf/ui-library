@@ -2,5 +2,8 @@
 	@apply w-full p-md;
 }
 .accordion-heading {
-	@apply w-full flex justify-between my-md pb-lg text-primary  border-b-thin border-neutral;
+	@apply w-full flex justify-between my-md pb-lg text-primary  border-b-thin border-neutral text-fs.28;
+}
+.accordion-content {
+	@apply text-left text-fs.base;
 }
