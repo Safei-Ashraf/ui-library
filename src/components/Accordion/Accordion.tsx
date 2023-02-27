@@ -11,7 +11,7 @@ export const Accordion = ({ items, ...props }: AccordionProps): JSX.Element => {
 	const renderedItems = items.map(({ id, heading, content }, index) => {
 		const isExapnded = index === expandedIndex;
 		return (
-			<li key={id}>
+			<li key={id} className="accordion-item">
 				<div
 					className="accordion-heading"
 					onClick={() => {
