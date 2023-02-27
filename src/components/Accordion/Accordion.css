@@ -1,0 +1,6 @@
+.accordion-container {
+	@apply w-full p-md;
+}
+.accordion-heading {
+	@apply w-full flex justify-between my-md pb-lg text-primary  border-b-thin border-neutral;
+}
