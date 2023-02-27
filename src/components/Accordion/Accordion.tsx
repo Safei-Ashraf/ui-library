@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { AccordionProps } from "./Accordion.d";
-import ChevronIcon from "./ChevronIcon";
+import ChevronIcon from "../ChevronIcon";
 import "./Accordion.css";
 
 export const Accordion = ({ items, ...props }: AccordionProps): JSX.Element => {
@@ -33,7 +33,7 @@ export const Accordion = ({ items, ...props }: AccordionProps): JSX.Element => {
 										? "rotate(0deg)"
 										: "rotate(90deg)"
 								}`,
-								transition: "all 0.2s linear",
+								transition: "all 0.1s linear",
 							}}
 						/>
 					</div>

@@ -1,6 +1,6 @@
 import "./App.css";
 import Accordion from "./components/Accordion";
-import ChevronIcon from "./components/Accordion/ChevronIcon";
+import ChevronIcon from "./components/ChevronIcon";
 function App() {
 	const items = [
 		{
