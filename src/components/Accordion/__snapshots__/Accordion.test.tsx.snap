@@ -1,7 +1,122 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[` 1`] = `
-<div>
-  Accordion
-</div>
+<ul
+  className="accordion-container"
+>
+  <li
+    className="accordion-item"
+  >
+    <div
+      className="accordion-heading"
+      onClick={[Function]}
+    >
+      <h3
+        className="heading-text"
+      >
+        1st Heading here
+      </h3>
+      <div
+        className="expand-icon"
+      >
+        <svg
+          className="rotate-270"
+          fill="currentColor"
+          height="20"
+          role="icon"
+          style={
+            Object {
+              "transform": "rotate(90deg)",
+              "transition": "all 0.1s linear",
+            }
+          }
+          viewBox="0 0 455 455"
+          width="20"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M227.5,0C101.855,0,0,101.855,0,227.5S101.855,455,227.5,455S455,353.145,455,227.5S353.145,0,227.5,0z M227.5,
+ 327.148L99.411,199.476l21.178-21.248L227.5,284.791l106.911-106.563l21.178,21.248L227.5,327.148z"
+          />
+        </svg>
+      </div>
+    </div>
+  </li>
+  <li
+    className="accordion-item"
+  >
+    <div
+      className="accordion-heading"
+      onClick={[Function]}
+    >
+      <h3
+        className="heading-text"
+      >
+        2nd Heading here
+      </h3>
+      <div
+        className="expand-icon"
+      >
+        <svg
+          className="rotate-270"
+          fill="currentColor"
+          height="20"
+          role="icon"
+          style={
+            Object {
+              "transform": "rotate(90deg)",
+              "transition": "all 0.1s linear",
+            }
+          }
+          viewBox="0 0 455 455"
+          width="20"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M227.5,0C101.855,0,0,101.855,0,227.5S101.855,455,227.5,455S455,353.145,455,227.5S353.145,0,227.5,0z M227.5,
+ 327.148L99.411,199.476l21.178-21.248L227.5,284.791l106.911-106.563l21.178,21.248L227.5,327.148z"
+          />
+        </svg>
+      </div>
+    </div>
+  </li>
+  <li
+    className="accordion-item"
+  >
+    <div
+      className="accordion-heading"
+      onClick={[Function]}
+    >
+      <h3
+        className="heading-text"
+      >
+        3rd Heading here
+      </h3>
+      <div
+        className="expand-icon"
+      >
+        <svg
+          className="rotate-270"
+          fill="currentColor"
+          height="20"
+          role="icon"
+          style={
+            Object {
+              "transform": "rotate(90deg)",
+              "transition": "all 0.1s linear",
+            }
+          }
+          viewBox="0 0 455 455"
+          width="20"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M227.5,0C101.855,0,0,101.855,0,227.5S101.855,455,227.5,455S455,353.145,455,227.5S353.145,0,227.5,0z M227.5,
+ 327.148L99.411,199.476l21.178-21.248L227.5,284.791l106.911-106.563l21.178,21.248L227.5,327.148z"
+          />
+        </svg>
+      </div>
+    </div>
+  </li>
+</ul>
 `;
