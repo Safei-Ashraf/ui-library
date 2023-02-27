@@ -91,6 +91,7 @@ module.exports = {
 			lg: "8px",
 		},
 		borderWidth: {
+			0: 0,
 			thin: "1px",
 			thick: "2px",
 			bold: "4px",
