@@ -5,6 +5,7 @@ export const ChevronIcon = ({
 	direction = "down",
 	size = "lg",
 	style,
+	classes,
 	...props
 }: ChevronIconProps): JSX.Element => {
 	const baseIconSizes = className({
@@ -27,7 +28,9 @@ export const ChevronIcon = ({
 				fill="currentColor"
 				width={baseIconSizes}
 				height={baseIconSizes}
-				className={iconDirection}
+				className={`${iconDirection} ${
+					classes !== undefined ? classes : ""
+				}`}
 				style={style}
 				{...props}
 			>

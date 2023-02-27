@@ -24,7 +24,7 @@ export const Accordion = ({ items, ...props }: AccordionProps): JSX.Element => {
 					}}
 				>
 					<h3 className="heading-text">{heading}</h3>
-					<div className="expand-icon">
+					<div className="expand-icon-container">
 						<ChevronIcon
 							direction="right"
 							style={{
@@ -35,6 +35,7 @@ export const Accordion = ({ items, ...props }: AccordionProps): JSX.Element => {
 								}`,
 								transition: "transform 0.3s linear",
 							}}
+							classes="expand-icon"
 						/>
 					</div>
 				</div>
