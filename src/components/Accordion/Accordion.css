@@ -1,9 +1,13 @@
 .accordion-container {
-	@apply w-full p-md;
+	@apply list-none pt-xxs;
+}
+.accordion-item {
+	@apply pr-md;
 }
 .accordion-heading {
-	@apply w-full flex justify-between my-md pb-lg text-primary  border-b-thin border-neutral text-fs.28;
+	@apply w-full flex justify-between items-center  my-lg pb-md  text-primary text-fs.20 h-8 pr-md  
+	border-solid border-0 border-b-thin border-neutral-lighter;
 }
 .accordion-content {
-	@apply text-left text-fs.base;
+	@apply text-left text-fs.base text-neutral-focus;
 }
