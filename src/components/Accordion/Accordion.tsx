@@ -24,18 +24,12 @@ export const Accordion = ({ items, ...props }: AccordionProps): JSX.Element => {
 					}}
 				>
 					<h3 className="heading-text">{heading}</h3>
-					<div className="expand-icon-container">
+					<div className="icon-container">
 						<ChevronIcon
 							direction="right"
-							style={{
-								transform: `${
-									isExapnded
-										? "rotate(0deg)"
-										: "rotate(90deg)"
-								}`,
-								transition: "transform 0.3s linear",
-							}}
-							classes="expand-icon"
+							classes={`expand-icon ${
+								isExapnded ? "no-rotation" : "rotate-down"
+							}`}
 						/>
 					</div>
 				</div>

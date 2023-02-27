@@ -17,3 +17,12 @@
 .open {
 	max-height: 400px;
 }
+.expand-icon {
+	transition: transform 0.3s linear;
+}
+.no-rotation {
+	transform: rotate(0deg);
+}
+.rotate-down {
+	transform: rotate(90deg);
+}
