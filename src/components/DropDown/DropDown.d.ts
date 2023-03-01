@@ -1,8 +1,8 @@
 export interface DropDownItem {
-	name: string;
-	value: string;
+  name: string;
+  value: string;
 }
 export interface DropDownProps {
-	placeholder: string;
-	items?: DropDownItem[];
+  placeholder: string;
+  items?: DropDownItem[];
 }
