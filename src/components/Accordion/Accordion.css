@@ -1,28 +1,28 @@
 .accordion-container {
-	@apply list-none pt-xxs;
+  @apply list-none pt-xxs;
 }
 .accordion-item {
-	@apply pr-md;
+  @apply pr-md;
 }
 .accordion-heading {
-	@apply w-full flex justify-between items-center  my-lg pb-md  text-primary text-fs.20 h-8 pr-md  
+  @apply w-full flex justify-between items-center  my-lg pb-md  text-primary text-fs.20 h-8 pr-md  
 	border-solid border-0 border-b-thin border-neutral-lighter;
 }
 .accordion-content {
-	@apply text-left text-fs.base text-neutral-focus;
-	transition: max-height 0.3s linear;
-	overflow: hidden;
-	max-height: 0;
+  @apply text-left text-fs.base text-neutral-focus;
+  transition: max-height 0.3s linear;
+  overflow: hidden;
+  max-height: 0;
 }
 .open {
-	max-height: 400px;
+  max-height: 400px;
 }
 .expand-icon {
-	transition: transform 0.3s linear;
+  transition: transform 0.3s linear;
 }
 .no-rotation {
-	transform: rotate(0deg);
+  transform: rotate(0deg);
 }
 .rotate-down {
-	transform: rotate(90deg);
+  transform: rotate(90deg);
 }
