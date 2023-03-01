@@ -1,0 +1,11 @@
+import { {{name}}Props } from './{{name}}.d';
+import './{{name}}.css';
+
+export const {{name}} = ({...props }: {{name}}Props): JSX.Element => {
+
+  return (
+    <div className="{{name}}-container" {...props}>
+      Welcome to {{name}} Component
+    </div>
+  );
+};

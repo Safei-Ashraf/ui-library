@@ -1,59 +1,58 @@
 .btn {
-	@apply rounded-md tracking-wide font-medium border-solid outline-transparent border-thick font-inter flex flex-row justify-center items-center cursor-pointer;
+  @apply rounded-md tracking-wide font-medium border-solid outline-transparent border-thick font-inter flex flex-row justify-center items-center cursor-pointer;
 }
 .reverse {
-	@apply flex-row-reverse;
+  @apply flex-row-reverse;
 }
 .lg {
-	@apply px-lg py-md text-fs.20 h-4xl;
+  @apply px-lg py-md text-fs.20 h-4xl;
 }
 .md {
-	@apply px-md py-xs text-fs.base h-xxl;
+  @apply px-md py-xs text-fs.base h-xxl;
 }
 .sm {
-	@apply px-sm py-xxs text-fs.14 h-8;
+  @apply px-sm py-xxs text-fs.14 h-8;
 }
 /*variant = filled */
 .primary-filled {
-	@apply text-white bg-primary border-primary-border hover:bg-primary-hover hover:border-primary-hover active:bg-primary-focus active:border-primary-focus;
+  @apply text-white bg-primary border-primary-border hover:bg-primary-hover hover:border-primary-hover active:bg-primary-focus active:border-primary-focus;
 }
 .secondary-filled {
-	@apply text-white bg-secondary  border-secondary-border hover:bg-secondary-hover hover:border-secondary-hover active:bg-secondary-focus active:border-secondary-focus;
+  @apply text-white bg-secondary  border-secondary-border hover:bg-secondary-hover hover:border-secondary-hover active:bg-secondary-focus active:border-secondary-focus;
 }
 .neutral-filled {
-	@apply text-white bg-neutral border-neutral-light  hover:bg-neutral-hover hover:border-neutral-hover active:bg-neutral-focus active:border-neutral-focus;
+  @apply text-white bg-neutral border-neutral-light  hover:bg-neutral-hover hover:border-neutral-hover active:bg-neutral-focus active:border-neutral-focus;
 }
 .disabled-filled {
-	@apply text-white bg-neutral-disabled-bg text-neutral-disabled-text border-transparent pointer-events-none;
+  @apply text-white bg-neutral-disabled-bg text-neutral-disabled-text border-transparent pointer-events-none;
 }
 
 /*variant = outline */
 
 .primary-outline {
-	@apply bg-transparent text-primary border-primary-border  hover:bg-primary-bg-light hover:text-primary-hover active:border-thick active:text-primary-focus active:border-primary-focus;
+  @apply bg-transparent text-primary border-primary-border  hover:bg-primary-bg-light hover:text-primary-hover active:border-thick active:text-primary-focus active:border-primary-focus;
 }
 .secondary-outline {
-	@apply bg-transparent text-secondary border-secondary-border hover:text-secondary-hover hover:bg-secondary-outline-hover hover:border-secondary-hover active:border-thick active:border-secondary-focus active:text-secondary-focus;
+  @apply bg-transparent text-secondary border-secondary-border hover:text-secondary-hover hover:bg-secondary-outline-hover hover:border-secondary-hover active:border-thick active:border-secondary-focus active:text-secondary-focus;
 }
 .neutral-outline {
-	@apply bg-transparent text-neutral  border-neutral hover:bg-neutral-lighter hover:text-neutral-hover  active:border-thick;
+  @apply bg-transparent text-neutral  border-neutral hover:bg-neutral-lighter hover:text-neutral-hover  active:border-thick;
 }
 .disabled-outline {
-	@apply bg-transparent text-neutral border-neutral-lighter pointer-events-none opacity-0.3;
+  @apply bg-transparent text-neutral border-neutral-lighter pointer-events-none opacity-0.3;
 }
 
 /*variant = text */
 
 .primary-text {
-	@apply bg-transparent text-primary border-transparent  hover:bg-primary-bg-light hover:text-primary-hover active:border-thick active:text-primary-focus;
+  @apply bg-transparent text-primary border-transparent  hover:bg-primary-bg-light hover:text-primary-hover active:border-thick active:text-primary-focus;
 }
 .secondary-text {
-	@apply bg-transparent text-secondary border-transparent hover:text-secondary-hover hover:bg-secondary-outline-hover  active:border-thick  active:text-secondary-focus;
+  @apply bg-transparent text-secondary border-transparent hover:text-secondary-hover hover:bg-secondary-outline-hover  active:border-thick  active:text-secondary-focus;
 }
 .neutral-text {
-	@apply bg-transparent text-neutral  border-transparent hover:bg-neutral-lighter hover:text-neutral-hover  active:border-thick;
+  @apply bg-transparent text-neutral  border-transparent hover:bg-neutral-lighter hover:text-neutral-hover  active:border-thick;
 }
 .disabled-text {
-	@apply bg-transparent text-neutral border-transparent pointer-events-none opacity-0.3;
+  @apply bg-transparent text-neutral border-transparent pointer-events-none opacity-0.3;
 }
-

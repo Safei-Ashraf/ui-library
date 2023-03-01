@@ -1,3 +1,3 @@
-import { ChevronIcon } from "./ChevronIcon";
+import { ChevronIcon } from './ChevronIcon';
 
 export default ChevronIcon;
