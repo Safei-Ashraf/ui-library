@@ -1,13 +1,13 @@
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 //import renderer from 'react-test-renderer';
-import { {{name}} } from './index';
+import { {{pascalcase name}} } from './index';
 
-describe('{{name}}', () => {
+describe('{{pascalcase name}}', () => {
 
-  it('render {{name}} with default text content', () => {
-   const text = 'Welcome to {{name}} Component'
-    render(<{{name}}/>);
+  it('render {{pascalcase name}} with default text content', () => {
+   const text = 'Welcome to {{pascalcase name}} Component'
+    render(<{{pascalcase name}}/>);
     expect(screen.getByText(text)).toBeInTheDocument();
   });
   
@@ -17,7 +17,7 @@ describe('{{name}}', () => {
 //snapshot
 /*
 describe('renders correctly', () => {
-  const tree = renderer.create(<{{name}} />).toJSON();
+  const tree = renderer.create(<{{pascalcase name}} />).toJSON();
   expect(tree).toMatchSnapshot();
 });
 */
