@@ -1,8 +1,14 @@
 export interface DropDownItem {
-  name: string;
+  label: string;
   value: string;
+  id: string;
+  isDisabled: boolean;
 }
-export interface DropDownProps {
-  placeholder: string;
-  items?: DropDownItem[];
-}
+export type DropDownProps = {
+  defaultValue?: { label: string; value: string };
+  label: string;
+  options: DropDownItem[];
+  id: string;
+  value: string;
+  onChange: (value: string) => void;
+};
