@@ -2,8 +2,8 @@
   "files.associations": {
     "*.css": "tailwindcss"
   },
-  "[handlebars]": {
-    "editor.formatOnSave": false,
-    "editor.formatOnPaste": false
-  }
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": { "editor.defaultFormatter": "esbenp.prettier-vscode" }
 }
