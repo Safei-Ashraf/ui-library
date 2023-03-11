@@ -9,6 +9,6 @@ export type DropDownProps = {
   label: string;
   options: DropDownItem[];
   id: string;
-  value: string;
-  onChange: (value: string) => void;
+  value: DropDownItem;
+  onSelect: (value: DropDownItem) => void;
 };

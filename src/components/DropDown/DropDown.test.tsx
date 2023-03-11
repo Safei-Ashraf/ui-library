@@ -12,9 +12,14 @@ describe('DropDown', () => {
         options={dummyData}
         label={label}
         id={id}
-        value=""
+        value={{
+          label: '',
+          value: '',
+          id: '',
+          isDisabled: false,
+        }}
         defaultValue={{ label: 'select', value: '' }}
-        onChange={() => {}}
+        onSelect={() => {}}
       />
     );
     expect(screen.getByText(placeholderText)).toBeInTheDocument();

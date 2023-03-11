@@ -1,0 +1,16 @@
+.select-container {
+  @apply relative text-left text-fs.20;
+  min-width: 10rem;
+}
+.select-head {
+  @apply flex justify-between items-center p-xs rounded-sm border-primary border-thin cursor-pointer bg-white w-full;
+}
+.select-body {
+  @apply bg-white text-primary rounded-sm;
+}
+.select-option {
+  @apply hover:bg-primary-hover hover:text-white  cursor-pointer p-xxs;
+}
+.disabled {
+  @apply pointer-events-none cursor-not-allowed bg-neutral-light hover:bg-neutral-light text-primary-focus;
+}
