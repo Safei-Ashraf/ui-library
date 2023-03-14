@@ -66,6 +66,7 @@ module.exports = {
       0.5: 0.5,
     },
     padding: {
+      0: 0,
       xxs: '0.25rem',
       xs: '0.5rem',
       sm: '0.75rem',
@@ -75,6 +76,7 @@ module.exports = {
       xxl: '2.5rem',
     },
     margin: {
+      0: 0,
       xxs: '0.25rem',
       xs: '0.5rem',
       sm: '0.75rem',
