@@ -1,15 +1,15 @@
 .select-container {
-  @apply relative text-left text-fs.20;
+  @apply relative text-left text-fs.20 text-primary font-inter font-medium;
   min-width: 10rem;
 }
 .select-head {
-  @apply flex justify-between items-center p-xs rounded-sm border-primary border-thin cursor-pointer bg-white w-full;
+  @apply flex justify-between items-center p-xs rounded-sm cursor-pointer bg-white w-full;
 }
 .select-body {
-  @apply bg-white text-primary rounded-sm;
+  @apply bg-white text-primary rounded-b-sm list-none p-0 m-0;
 }
 .select-option {
-  @apply hover:bg-primary-hover hover:text-white  cursor-pointer p-xxs;
+  @apply hover:bg-primary-hover hover:text-white  cursor-pointer p-xxs text-left;
 }
 .disabled {
   @apply pointer-events-none cursor-not-allowed bg-neutral-light hover:bg-neutral-light text-primary-focus;

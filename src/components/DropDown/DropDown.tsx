@@ -8,7 +8,6 @@ export const DropDown = ({
   options,
   value,
   onSelect,
-  id,
   defaultValue,
   ...props
 }: DropDownProps): JSX.Element => {
