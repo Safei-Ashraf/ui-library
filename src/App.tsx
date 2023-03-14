@@ -1,26 +1,24 @@
+import { useState } from 'react';
 import './App.css';
-import Accordion from './components/Accordion';
+import Button from './components/Button';
+import DropDown from './components/DropDown';
+import { options } from './components/DropDown/mockData';
 function App() {
-  const items = [
-    {
-      id: '1',
-      heading: '1st Heading here',
-      content: '1st content here 1st content here',
-    },
-    {
-      id: '2',
-      heading: '2nd Heading here',
-      content: '2nd content here 2nd content here',
-    },
-    {
-      id: '3',
-      heading: '3rd Heading here',
-      content: '3rd content here 3rd content here',
-    },
-  ];
+  const [selected, setSelected] = useState({
+    value: '',
+    label: '',
+    isDisabled: false,
+    id: '',
+  });
+
   return (
     <div className="App">
-      <Accordion items={items} />
+      <DropDown
+        onSelect={setSelected}
+        value={selected}
+        options={options}
+        label={''}
+      />
     </div>
   );
 }
