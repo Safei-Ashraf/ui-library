@@ -1,17 +1,15 @@
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import DropDown from './index';
-import dummyData from './dummyData';
+import { options } from './mockData';
 describe('DropDown', () => {
   const placeholderText = 'Select...';
-  const id = 'dd1';
   const label = 'dd label';
   it('renders the dropdown with placeholder text', () => {
     render(
       <DropDown
-        options={dummyData}
+        options={options}
         label={label}
-        id={id}
         value={{
           label: '',
           value: '',
@@ -23,5 +21,17 @@ describe('DropDown', () => {
       />
     );
     expect(screen.getByText(placeholderText)).toBeInTheDocument();
+  });
+  it('checks value', () => {
+    render(
+      <DropDown
+        options={options}
+        label={label}
+        value={options[0]}
+        defaultValue={{ label: 'select', value: '' }}
+        onSelect={() => {}}
+      />
+    );
+    expect(screen.getByText(options[0].label)).toBeInTheDocument();
   });
 });
