@@ -81,9 +81,9 @@ module.exports = {
       md: '1rem',
       lg: '1.5rem',
       xl: '2rem',
-      xxl: '2.5rem',
-      xxxl: '3.5rem',
-      xxxxl: '5rem',
+      '2xl': '2.5rem',
+      '3xl': '3.5rem',
+      '4xl': '5rem',
     },
     borderRadius: {
       sm: '2px',
