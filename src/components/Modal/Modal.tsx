@@ -13,7 +13,13 @@ export const Modal = ({ isDisplayed, handleDisplay,actionBar, children,...props 
        document.body.style.overflow = 'unset';
     }
 
-  }, [isDisplayed])
+    }, [isDisplayed])
+  let portalRoot = document.getElementById("portal")
+if (!portalRoot) {
+  portalRoot = document.createElement('div')
+  portalRoot.setAttribute('id', 'portal')
+  document.body.appendChild(portalRoot)
+}
 return ReactDOM.createPortal(
     <>
       <div className='overlay'></div>
