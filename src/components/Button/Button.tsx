@@ -13,7 +13,7 @@ export const Button = ({
   iconDirection = 'right',
   iconOnly = false,
   isDisabled,
-  text = 'Click me',
+  text,
   icon,
   bgColor,
   textColor,
