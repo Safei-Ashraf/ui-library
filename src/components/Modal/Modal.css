@@ -1,0 +1,15 @@
+.overlay {
+  @apply fixed inset-0 bg-neutral opacity-0.5 overflow-hidden;
+}
+.modal-container {
+  @apply fixed inset-40 bg-primary-bg-light text-white flex-col justify-between font-inter;
+  max-height: fit-content;
+  padding: 4rem;
+}
+
+.action-bar {
+  @apply flex justify-end mt-md;
+}
+.close-button {
+  @apply absolute text-error-content text-fs.12 bg-error-background top-4 right-4;
+}
