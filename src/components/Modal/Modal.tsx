@@ -19,19 +19,22 @@ if (!portalRoot) {
   portalRoot = document.createElement('div')
   portalRoot.setAttribute('id', 'portal')
   document.body.appendChild(portalRoot)
-}
+  }
+  const Overlay = () => <div className='overlay'></div>
+  const CloseButton = () => <button  className='close-button' onClick={handleDisplay}>Close</button>
+  
 return ReactDOM.createPortal(
-    <>
-      <div className='overlay'></div>
-      <div className="modal-container" {...props}>
-        <div className="modal-content">
-          {children}
-          <button  className='close-button' onClick={handleDisplay}>Close</button>
-        </div>
-        <div className="action-bar">
-          {actionBar}
-        </div>
+  <>
+    <Overlay/>
+    <div className="modal-container" {...props}>
+      <div className="modal-content">
+        {children}
+        <CloseButton/>
       </div>
+      <div className="action-bar">
+        {actionBar}
+      </div>
+    </div>
     </>
-  ,document.querySelector('#portal')!);
+  , document.querySelector('#portal')!);
 };
