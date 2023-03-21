@@ -1,11 +1,11 @@
-import { {{name}}Props } from './{{name}}.d';
-import './{{name}}.css';
+import { {{pascalcase name}}Props } from './{{pascalcase name}}.d';
+import './{{pascalcase name}}.css';
 
-export const {{name}} = ({...props }: {{name}}Props): JSX.Element => {
+export const {{pascalcase name}} = ({...props }: {{pascalcase name}}Props): JSX.Element => {
 
   return (
-    <div className="{{name}}-container" {...props}>
-      Welcome to {{name}} Component
+    <div className="{{pascalcase name}}-container" {...props}>
+      Welcome to {{pascalcase name}} Component
     </div>
   );
 };

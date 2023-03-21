@@ -44,7 +44,7 @@ export default function (/** @type {import('plop').NodePlopAPI} */ plop) {
       },
     ], // array of actions
   });
-  plop.setHelper('pascalcase', str => {
+  plop.setHelper('pascalcase', function (str) {
     return (' ' + str).toLowerCase().replace(/[^a-zA-Z0-9]+(.)/g, (m, chr) => {
       return chr.toUpperCase();
     });
